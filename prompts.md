@@ -76,3 +76,16 @@ with an
 ; each project is
 with an
 . Page order: header/nav, main with #about, #projects, #certifications, #skills, #languages, then footer. No inline styles; all design lives in css/styles.css. No email addresses or mailto: links. Layout is flexbox (.row + .col-1-2/.col-1-3); the grid-column rules on #about/#projects only apply inside the ≤600px media query. Git Branch main; commits are written in Spanish. Remote origin is configured as https://github.com/Aidee-val/cv..git (double dot) — verify it before pushing.
+
+## Qué cambio
+
+### Lo que el agente tuvo que adivinar con el prompt vago:
+- **Estructura y etiquetas HTML:** Inventó las etiquetas de marcado (usando contenedores `<div>` genéricos en lugar de `<section>`, `<ul>`, `<li>` y `<time>`).
+- **Nombres y fechas de los cursos:** Tuvo que inventar nombres de certificaciones genéricas y fechas aleatorias.
+- **Ubicación exacta:** Colocó la sección al final del documento o en un orden arbitrario al no especificar que debía ir dentro de `<main>` y justo después de `#skills`.
+- **Regla CSS:** Aplicó estilos arbitrarios o creó clases CSS innecesarias en lugar de limitar la modificación a la regla específica `#certifications { grid-column: 1 / -1; }`.
+
+### Lo que ya NO tuvo que adivinar con el prompt preciso:
+- **Uso de contexto `@`:** Supo la estructura exacta del proyecto al recibir `@index.html` y `@css/styles.css`.
+- **Datos reales y semánticos:** Recibió los títulos exactos (CCNA 1, CCNA 2, Acreditación de Inglés), instituciones y el atributo semántico `<time datetime="AAAA-MM">`.
+- **Ubicación precisa y CSS exacto:** Insertó la `<section>` e `<id>` en el lugar exacto y aplicó únicamente la regla CSS requerida sin alterar el resto del diseño.
