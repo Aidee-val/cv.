@@ -1,72 +1,8 @@
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Bitcount Ink';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-
 body {
   --google-font-color-bitcountink: none;
   background-color: #F4F6F9;
   color: #808080;
-  font-family: "Bitcount Ink", sans-serif;
+  font-family: 'VT323', monospace, sans-serif;
   line-height: 1.4;
 }
 
@@ -123,7 +59,7 @@ img {
 }
 
 #about {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)), url("/publico/img/muestras/banner.svg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)), url("publico/img/muestras/banner.svg");
   background-size: cover;
   color: #FFFFFF;
   grid-column: 1 / -1;
@@ -134,10 +70,6 @@ img {
   right: 16px;
   bottom: 16px;
   min-height: 44px;
-}
-
-#about {
-  grid-column: 1 / -1;
 }
 
 #projects {
