@@ -1,6 +1,6 @@
 **Modelo:** DeepSeek V4.1 Flash Free
 
-##Agents.md
+##AGENTS.md
 
 CV - Aidee Calderon
 Sitio estático: index.html/index.html y css/styles.css. Sin frameworks.
