@@ -165,3 +165,7 @@ img {
     width: 100%;
   }
 }
+
+#certifications {
+  grid-column: 1 / -1;
+}

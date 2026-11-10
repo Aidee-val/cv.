@@ -20,9 +20,9 @@ Static one-page CV in plain HTML/CSS/JS. No package manager, build, lint, test, 
 ## Conventions
 - Visible text is Spanish (`<html lang="es">`); classes/IDs are English, lowercase, hyphenated (`primary-btn`, `col-1-3`, `toggle-details`).
 - Sections are `<section class="row">` with an `<h2>`; each project is `<article class="col-1-3">` with an `<h3>`.
-- Page order: `header`/`nav`, `main` with `#about`, `#projects`, `#certifications`, `#skills`, `#languages`, then `footer`.
+- Page order: `header`/`nav`, `main` with `#about`, `#projects`, `#skills`, `#certifications`, `#languages`, then `footer`.
 - No inline styles; all design lives in `css/styles.css`. No email addresses or `mailto:` links.
-- Layout is flexbox (`.row` + `.col-1-2`/`.col-1-3`); the `grid-column` rules on `#about`/`#projects` only apply inside the `≤600px` media query.
+- Layout is flexbox (`.row` + `.col-1-2`/`.col-1-3`); the `grid-column` rules on `#about`/`#projects`/`#certifications` only apply inside the `≤600px` media query.
 
 ## Git
 - Branch `main`; commits are written in Spanish.
