@@ -1,0 +1,111 @@
+<!-- Tu CV empieza aquí. Sigue los pasos de la izquierda. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV de Aidee Calderon</title>
+<link rel="icon" type="image/svg+xml" href="/publico/img/muestras/profile.svg">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/interactions.js" defer></script>
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com" rel="stylesheet">
+<meta name="keywords" content="CV, Portafolio, Proyectos">
+<meta name="description" content="CV de Aidee Calderon - Portafolio de proyectos">
+</head>
+<body>
+<header>
+<div class="top-bar">
+<p>Mi CV en HTML</p>
+</div>
+<h1>Aidee Calderon</h1>
+<nav>
+<ul>
+<li><a href="#about">Perfil</a></li>
+<li><a href="#projects">Proyectos</a></li>
+<li><a href="#education">Educación</a></li>
+<li><a href="#skills">Habilidades </a></li>
+<li><a href="#languages">Idiomas</a></li> 
+</ul>
+</nav>
+</header>
+<main>
+<section class="row" id="about">
+<h2>Perfil</h2>
+<div class="col-1-2">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ztpZdamMbQccEUK7d7-e_4ezJBRuWSaJnlp4r-rAPQ&s=10"
+alt="Silueta de una persona de frente">
+<p>Profesional motivada con gran capacidad de adaptación,excelente trabajo en equipo y enfoque en la resolución de problemas.
+</p>
+<a class="primary-btn" href="#projects">Ver mis proyectos</a>
+<button type="button" id="toggle-details" aria-expanded="false">Más sobre mí</button>
+</div>
+<div class="col-1-2">
+<p>Busco prácticas profesionales en desarrollo web.</p>
+</div>
+</section>
+<section class="row" id="projects">
+<h2><span class="highlight">Proyectos</span></h2>
+<article class="col-1-3">
+<img src="/publico/img/muestras/thumb-cv.svg"
+alt="Miniatura de un currículum en una página web">
+<h3>Proyecto 1</h3>
+<p>Desarrollo de videojuego</p>
+</article>
+<article class="col-1-3">
+<img src="/publico/img/muestras/thumb-cv.svg"alt="Miniatura de una pagina web">
+<h3>Proyecto 2</h3>
+<p>Desarollo base de datos</p>
+</article>
+<article class="col-1-3">
+<img src="/publico/img/muestras/thumb-cv.svg"alt="Miniatura de un proyecto web">
+ <h3>Proyecto 3</h3><p>Desarrollo pagina web</p>
+</article>
+</section>
+<section class="row" id="education">
+<h2><span class="highlight">Educación</span></h2>
+<ul>
+<li>Certificado CCNA1 (Cisco Certified Network Associate) | Cisco System | 2023</li>
+<li>Certificado CCNA2 (Cisco Certified Network Associate) | Cisco System | 2025</li>
+</ul>
+</section>
+<section class="row" id="skills">
+<h2><span class="highlight"> Habilidades</span></h2>
+<ol>
+<li>Adaptabilidad</li>
+<li>Desarrollo web</li>
+<li>Manejo de Microsoft Office</li>
+<li>Resolución de problemas</li>
+<li>Comunicación asertiva</li>
+</ol>
+<figure id="skills-gallery">
+  <img id="gallery-image" src="/publico/img/muestras/article-html.svg" alt="HTML: dos corchetes angulares sobre fondo verde">
+  <p id="image-counter" aria-live="polite"></p>
+  <div class="gallery-controls">
+<div class="thumbnails"></div>
+<button type="button" id="prev-image">Anterior</button>
+<button type="button" id="next-image">Siguiente</button>
+</div>
+<div class="thumbnails"></div>
+</figure>
+</section>
+
+<section class="row" id="languages">
+<h2><span class="highlight">Idiomas</span></h2>
+<ul>
+<li>Ingles</li>
+<li>Español</li>
+</ul>
+</section>
+<a class="contact-float" href="mailto:aidee.calderon35@my.unitec.edu.mx">Escríbeme</a>
+</main>
+<footer>
+<p>Hecho a mano con HTML y CSS</p>
+<p>
+Contacto:<a href="mailto:aidee.calderon35@my.unitec.edu.mx">aidee.calderon35@my.unitec.edu.mx
+</a>
+</p>
+<button type="button" id="copy-email" aria-live="polite">Copiar mi correo</button>
+</footer>
+</body>
+</html>
