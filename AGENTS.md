@@ -1,31 +1,29 @@
-# CV - Aidee Calderon
+# CV — Aidee Calderon
 
-Static HTML/CSS/JS site. No framework, no package manager, no build, lint, or test step — edit the files and reload the browser.
+Static one-page CV in plain HTML/CSS/JS. No package manager, build, lint, test, or CI — edit files and reload.
 
-## Files
-- Page: `index.html/index.html` (the file lives inside a directory also named `index.html`).
-- Styles: `css/styles.css`. Behavior: `js/interactions.js`.
-- `prompts.md` is the original prompt that produced this file, not project documentation.
+## Layout
+- Single page at the repo root: `index.html`; styles in `css/styles.css`, behavior in `js/interactions.js`.
+- `prompts.md` is a prompt log containing an older draft of this file; it is not project documentation or a source of truth.
+- The `publico/` assets referenced by the page are not in the repo.
 
 ## Preview
-- Serve the repo root (`python -m http.server 8000`) and open `/index.html/index.html`.
-- The page's `href="css/styles.css"` / `src="js/interactions.js"` resolve relative to the page, i.e. to `index.html/css/...`, which does not exist. Expect an unstyled, non-interactive page; if you fix it, use `../css/...` / `../js/...` or move the page to the repo root.
-- No automated checks: verify changes by loading the page and watching the browser console.
-
-## Conventions
-- Classes and IDs: English, lowercase, hyphenated (`primary-btn`, `col-1-3`, `toggle-details`).
-- Visible text: Spanish (`<html lang="es">`).
-- Each section is a `<section>` with an `<h2>`; each project is an `<article>` with an `<h3>`.
-- No inline styles — all design lives in `css/styles.css`.
-- Page structure: `header` with `nav`; `main` with `#about`, `#projects`, `#education`, `#skills`, `#languages`; `footer` last.
-- No email addresses or `mailto:` links.
-- Layout is flexbox (`.row` + `.col-1-2` / `.col-1-3`); the `grid-column` rules on `#about`/`#projects` only take effect inside the `≤600px` grid layout in the media query.
+- From the repo root: `python -m http.server 8000`, then open `http://localhost:8000/`.
+- No automated checks: verify changes in the browser, including the console.
 
 ## Known issues
-Verify before relying on these features:
-- `js/interactions.js` calls `shareButton.addEventListener(...)` on an undeclared variable, throwing at load and preventing the later arrow-key listener from registering. `closeMenu()` on Escape is also undefined. The gallery prev/next buttons and the "Más sobre mí" toggle do work because they are defined before the throw.
-- All images point to `/publico/img/muestras/*.svg` (banner, profile, thumbnails, gallery) and those assets are not in the repo. Root-absolute paths also break under a GitHub Pages project subpath.
-- The nine `@font-face` blocks use `url(https://gstatic.com)` instead of a real font file, so "Bitcount Ink" never loads and the site falls back to `sans-serif`.
+- `js/interactions.js` throws at `shareButton.addEventListener` (undeclared variable), so everything after it never registers — including the arrow-key listener. `closeMenu()` called on Escape is also undefined. The gallery buttons and "Más sobre mí" toggle do work because they are registered before the throw.
+- Nearly every image (banner, thumbnails, gallery, favicon) points to the missing root-absolute `/publico/img/muestras/*.svg`; these also break on GitHub Pages project subpaths. The profile photo alone is a Google-hosted thumbnail.
+- The nine `@font-face` blocks use `url(https://gstatic.com)` instead of a font file, so "Bitcount Ink" falls back to `sans-serif`. The `<link href="https://googleapis.com">` is not a valid Google Fonts URL.
+- Both `.thumbnails` containers are empty and unused by the JS.
+
+## Conventions
+- Visible text is Spanish (`<html lang="es">`); classes/IDs are English, lowercase, hyphenated (`primary-btn`, `col-1-3`, `toggle-details`).
+- Sections are `<section class="row">` with an `<h2>`; each project is `<article class="col-1-3">` with an `<h3>`.
+- Page order: `header`/`nav`, `main` with `#about`, `#projects`, `#education`, `#skills`, `#languages`, then `footer`.
+- No inline styles; all design lives in `css/styles.css`. No email addresses or `mailto:` links.
+- Layout is flexbox (`.row` + `.col-1-2`/`.col-1-3`); the `grid-column` rules on `#about`/`#projects` only apply inside the `≤600px` media query.
 
 ## Git
-- Branch `main`, remote `origin` (GitHub). Commit messages are written in Spanish.
+- Branch `main`; commits are written in Spanish.
+- Remote `origin` is configured as `https://github.com/Aidee-val/cv..git` (double dot) — verify it before pushing.
