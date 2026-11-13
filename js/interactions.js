@@ -5,9 +5,9 @@ const prevButton = document.getElementById('prev-image');
 const nextButton = document.getElementById('next-image');
 
 const images = [
-  { src: '/publico/img/muestras/article-html.svg', alt: 'HTML: dos corchetes angulares sobre fondo verde' },
-  { src: '/publico/img/muestras/article-flexbox.svg', alt: 'CSS con flexbox: tres cajas acomodadas en una fila' },
-  { src: '/publico/img/muestras/article-accessibility.svg', alt: 'Accesibilidad: un botón con el contorno de foco marcado' }
+  { src: 'publico/img/muestras/article-html.svg', alt: 'HTML: dos corchetes angulares sobre fondo verde' },
+  { src: 'publico/img/muestras/article-flexbox.svg', alt: 'CSS con flexbox: tres cajas acomodadas en una fila' },
+  { src: 'publico/img/muestras/article-accessibility.svg', alt: 'Accesibilidad: un botón con el contorno de foco marcado' }
 ];
 let current = 0;
 
@@ -57,16 +57,6 @@ toggleButton.addEventListener('click', () => {
   toggleButton.after(newList);
   toggleButton.textContent = 'Menos sobre mí';
   toggleButton.setAttribute('aria-expanded', 'true');
-});
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    closeMenu();
-  }
-});
-shareButton.addEventListener('click', () => {
-  navigator.clipboard.writeText(location.href).then(() => {
-    shareButton.textContent = 'Enlace copiado';
-  });
 });
 document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowRight') {
