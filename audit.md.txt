@@ -1,0 +1,45 @@
+# Sesión 11 · css/generated.css
+
+## Falla 1: El top-bar vuelve a ser lo más grande
+- **Principio:** Escala y jerarquía visual
+
+- **Línea:** css/generated.css, línea 19 (sobrescribe css/styles.css, línea 174)
+
+- **Qué falla:** .top-bar p recibió font-size: 2rem y color: #0F5C3D sobre fondo #EAE6DC, haciendo que la barra superior sea más grande que los subtítulos (main h2 con 1.5rem) y compita con el título principal (header h1).
+
+- **Por qué:** En css/styles.css (línea 174), .top-bar p estaba diseñado como una etiqueta sutil de contexto (0.72rem, en mayúsculas y con letter-spacing: 0.2em). Al agrandarlo a 2rem, se invierte la jerarquía visual del encabezado.
+
+- **Cómo la corregí:** Eliminé o ajusté la regla .top-bar p en css/generated.css para que conserve su tamaño original de 0.72rem (o 0.85rem), devolviendo el protagonismo al h1 del encabezado.
+
+## Falla 2: Los textos tienen el tamaño y fuente adecuado
+- **Principio:** Tipografía (Legibilidad e interlineado)
+
+- **Línea:** css/generated.css, línea 33 (sobrescribe css/styles.css, línea 52)
+
+- **Qué** falla: La regla main p, main li fijó line-height: 1.1, apretando verticalmente los párrafos y elementos de lista.
+
+- **Por qué:** En css/styles.css (línea 52), el body establece la fuente "Inter" a 1rem con un interlineado cómodo de line-height: 1.6. Bajarlo a 1.1 en el contenido principal reduce el espacio entre renglones y dificulta la lectura.
+
+- **Cómo la corregí:** Cambié line-height: 1.1 a line-height: 1.6 (o eliminé la regla para heredar el 1.6 de styles.css), recuperando el aire entre líneas y la legibilidad de la tipografía Inter.
+
+## Falla 3: Se corrige el espacio
+- **Principio:** Espaciado y proximidad
+
+- **Línea:** css/generated.css, línea 28 (sobrescribe css/styles.css, línea 271)
+
+- **Qué falla:** .row > h2 tiene margin-bottom: 64px (y main h2 sube a 1.5rem), lo que desalinea los títulos de sección respecto a su columna de contenido en el grid.
+
+- **Por qué:** En css/styles.css (líneas 258 y 271), .row usa un grid de dos columnas donde .row > h2 va a la izquierda (margin: 0) junto al contenido. Al añadir margin-bottom: 64px, se genera un espacio vacío innecesario debajo del encabezado de cada fila y se rompe la alineación con el contenido.
+
+- **Cómo la corregí:** Restablecí margin-bottom: 0 en .row > h2 para mantener la alineación del grid en escritorio (y en móvil conservé la separación natural de gap: 1.5rem definida en styles.css, línea 677).
+
+## Falla 4: Se modifica el color
+- **Principio:** Color
+
+- **Línea:** css/styles.css, línea 12
+
+- **Qué falla:** La nota del precio casi no se lee. El selector marca 2.2.
+
+- **Por qué:** Gris claro sobre blanco no llega a 4.5:1.
+
+- **Cómo la corregí:** Usé un gris más oscuro; el selector marca 6.7.
